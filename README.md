@@ -1,6 +1,6 @@
 # MySQL DBS Layer proxy
 
-Simple DBSLayer for MySQL writen on Bash.
+Simple DBSLayer for MySQL written on Bash.
 This simple server get data from MySQL by REST in JSON format.
 
 ## Components
