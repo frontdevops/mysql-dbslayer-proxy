@@ -20,7 +20,7 @@ This simple server get data from MySQL by REST in JSON format.
 
 ### Start server
 
-    ./dbjs.sh
+    sudo ./dbjs.sh
     listening on [any] 8880 ...
 
 ### Connect to server from client (browser or other)
