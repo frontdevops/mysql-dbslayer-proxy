@@ -1,7 +1,10 @@
-# MySQL DBS Layer proxy
+# MySQL DBSLayer proxy
 
 Simple DBSLayer for MySQL written on Bash.
 This simple server get data from MySQL by REST in JSON format.
+
+The MyDBSLayer is a lightweight database abstraction layer suitable for high-load websites where you need the scalable advantages of connection pooling. Written in C for speed, DBSlayer talks to clients via JSON over HTTP, meaning it's simple to monitor and can swiftly interoperate with any web framework you choose.
+
 
 ## Components
 
