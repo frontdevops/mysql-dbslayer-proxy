@@ -15,22 +15,28 @@ The MyDBSLayer is a lightweight database abstraction layer suitable for high-loa
 
 ### mysql2json
 
-    # exec
-    mysql -e "SELECT * FROM `mytable`" | ./mysql2json.sh
-    
-    # output
-    {"fields":["field_1","field_2","field_3"],"data":[["1","2","3"],["4","5","6"],["7","8","9"]]}
+```bash
+# exec
+mysql -e "SELECT * FROM `mytable`" | ./mysql2json.sh
+
+# output
+{"fields":["field_1","field_2","field_3"],"data":[["1","2","3"],["4","5","6"],["7","8","9"]]}
+```
+
 
 ### Start server
 
-    sudo ./dbjs.sh
-    listening on [any] 8880 ...
+```bash
+sudo ./dbjs.sh
+listening on [any] 8880 ...
+```
+
 
 ### Connect to server from client (browser or other)
 
 **List of databases**
 
-```
+```js
 // http://127.0.0.1:8880 
 {
     fields: [
@@ -44,7 +50,8 @@ The MyDBSLayer is a lightweight database abstraction layer suitable for high-loa
 ```
 
 **List of tables from selected database**
-```
+
+```js
 // http://127.0.0.1:8880/test
 {
           fields: [
@@ -60,7 +67,8 @@ The MyDBSLayer is a lightweight database abstraction layer suitable for high-loa
 ```
 
 **Get data from table**
-```
+
+```js
 // http://127.0.0.1:8880/test.shops
 {
      "fields": [
