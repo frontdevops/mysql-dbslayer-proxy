@@ -9,7 +9,7 @@ The MyDBSLayer is a lightweight database abstraction layer suitable for high-loa
 ## Components
 
 * mysql2json.sh - convert output from MySQL to JSON
-* dbjs.sh - DBS proxy server
+* dbjs.sh - DBS proxy server in one file
 
 ## Usage
 
