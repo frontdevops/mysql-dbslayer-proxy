@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 :;while [ $? -eq 0 ]
 do.
