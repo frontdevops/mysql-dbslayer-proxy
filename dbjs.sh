@@ -1,5 +1,17 @@
 #!/bin/env bash
 
+
+function m2j()
+{
+  sed -e 's/\t/\",\"/g' \
+      -e 's/^/\[\"/'    \
+      -e 's/$/\"\],/'   \
+      -e '1s/\(.*\)/\{\"fields\":\1\ \"data\":[/g' -e '$s/.$/\]\}/' \
+  | tr -d "\n" $1
+}
+
+
+
 :;while [ $? -eq 0 ]
 do.
   nc -vlp 8880 -c '(
@@ -22,7 +34,6 @@ do.
     c="Content";
 
     m="mysql -ulol -ptrololo"
-    m2j="~/bin/mysql2json.sh"
 
     $e "$o$c-Type: text/json";
     $e;
@@ -36,13 +47,13 @@ do.
 
       if [ "$tb" = "$db" ]
       then
-        $e `$m ${db:-test} -e "show tables" | $m2j`;
+        $e `$m ${db:-test} -e "show tables" | m2j`;
       else
-        $e `$m ${db:-test} -e "select * from $tb" | $m2j`;
+        $e `$m ${db:-test} -e "select * from $tb" | m2j`;
       fi;
 
     else
-      $e `$m -e "show databases" | $m2j`;
+      $e `$m -e "show databases" | m2j`;
     fi
   )';
 done
